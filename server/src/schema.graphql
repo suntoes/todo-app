@@ -1,0 +1,15 @@
+type Todo {
+  id: Float
+  task: String
+  is_done: Boolean
+}
+
+type Query {
+  listTodos: [Todo]
+}
+
+type Mutation {
+  createTodo(task: String): Todo,
+  deleteTodo(id: Float!): Todo,
+  updateTodo(id: Float!, task: String, is_done: Boolean): Todo
+}
